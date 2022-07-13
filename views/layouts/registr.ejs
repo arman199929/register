@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/register_style.css">
+
+<body class="log-body">
+
+
+<div class="input_group">
+    <div data-text="<%- title %>" class="title"><%- title %></div>
+    <form method="post" action="/register">
+        <div class="user-box">
+            <input type="text" id="full_name" name="full_name" required><br>
+            <label for="full_name">Enter Full Name:</label><br>
+        </div>
+        <div class="user-box">
+            <input type="text" id="username" name="username" required><br>
+            <label for="username">Enter Username:</label><br>
+        </div>
+        <div class="user-box">
+            <input type="password" id="password" name="password" required><br>
+            <label for="password"> Password</label><br>
+        </div>
+        <div class="user-box">
+            <input type="text" id="city" name="city" required><br>
+            <label for="city"> City</label><br>
+        </div>
+        <div class="user-box">
+            <input type="number" id="phone" name="phone" required><br>
+            <label for="phone">Mobile Number:</label><br>
+        </div>
+        <div class="user-box">
+            <input type="number" id="whatsapp" name="whatsapp" required><br>
+            <label for="whatsapp">Enter Whatsapp Number:</label><br>
+        </div>
+        <br>
+        <input type="submit" class="btn" value="Submit">
+    </form>
+</div>
+
+</body>

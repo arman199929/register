@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+.edit-body {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    --var-color: rgb(14, 135, 214);
+    background-color: #313335;
+}
+.input-group {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+.input-group .user-box {
+    position: relative;
+}
+
+.input-group .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.input-group .user-box label {
+    text-align: start;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-group .user-box input:focus ~ label,
+.input-group .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.edit {
+    width: 150px;
+    height: 45px;
+    border-radius: 45px;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    box-shadow: 0 8px 15px rgba(189, 142, 62, 0.445);
+    transition: all 0.3s ease;
+}
+
+.edit:hover {
+    background: #ffe426;
+    transform: translateY(-7px);
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(46, 233, 229, 0.445);
+}
+.edit-title{
+    font-size: 2rem;
+    color: var(--var-color);
+    position: relative;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.edit-title::before {
+    position: absolute;
+    content: attr(data-text);
+    text-shadow: 0 0 20px var(--var-color);
+    filter: blur(10px) brightness(0);
+    animation: flicker 2s linear forwards;
+    animation-delay: 1s;
+}
+
+@keyframes flicker {
+    0% {
+        filter: blur(15px) brightness(0);
+    }
+    3% {
+        filter: blur(15px) brightness(1);
+    }
+    6% {
+        filter: blur(15px) brightness(0);
+    }
+    7% {
+        filter: blur(15px) brightness(1);
+    }
+    8% {
+        filter: blur(15px) brightness(0);
+    }
+    9% {
+        filter: blur(15px) brightness(1);
+    }
+    10% {
+        filter: blur(15px) brightness(0);
+    }
+    20% {
+        filter: blur(15px) brightness(1);
+    }
+    30% {
+        filter: blur(15px) brightness(0);
+    }
+    40% {
+        filter: blur(15px) brightness(1);
+    }
+    50% {
+        filter: blur(15px) brightness(0);
+    }
+    70% {
+        filter: blur(15px) brightness(1);
+    }
+    80% {
+        filter: blur(15px) brightness(1);
+    }
+    95% {
+        filter: blur(15px) brightness(1);
+    }
+
+    100% {
+        filter: blur(15px) brightness(1);
+    }
+
+}
+

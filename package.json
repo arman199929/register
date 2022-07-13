@@ -1,0 +1,34 @@
+{
+  "name": "vicionline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arman199929/vicionline.git"
+  },
+  "author": "Arman Galstyan",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "base": "^3.0.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-validator": "^6.14.2",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.19",
+    "password": "^0.1.1",
+    "path": "^0.12.7",
+    "react-scripts": "^5.0.1",
+    "url": "^0.11.0"
+  }
+}

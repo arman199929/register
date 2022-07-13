@@ -1,0 +1,47 @@
+
+<link rel="stylesheet" href="/css/user_list_style.css">
+<body class="user_list">
+<h2 class="title"><%- title %></h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Full Name:</th>
+            <th>Username:</th>
+            <th>City:</th>
+            <th>Phone:</th>
+            <th>Whatsapp number:</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <% users.forEach(function(user){
+        %>
+            <% if (user.id > 1){ %>
+                <tr>
+                    <td> <%= user.full_name %></td>
+                    <td> <%= user.username %></td>
+                    <td><%= user.city %> </td>
+                    <td><%= user.phone %> </td>
+                    <td><%= user.whatsapp %> </td>
+                    <td>
+                        <form method="post" action="/admin/delete">
+                            <input type="hidden" value="<%= user.id %>" name="id">
+                            <button style="border: none;cursor: pointer">
+                                <img src="/icons/bin.png" alt="delete">
+                            </button>
+                        </form>
+
+                        <a href="/admin/edit/<%= user.id %>">
+                            <img src="/icons/edit.png" alt="">
+                        </a>
+                    </td>
+
+                </tr>
+        <% }}) %>
+
+        </tbody>
+    </table>
+</div>
+</body>

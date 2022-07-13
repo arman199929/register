@@ -1,0 +1,34 @@
+<body class="edit-body">
+
+<link rel="stylesheet" href="/css/user_edit_style.css">
+
+<div class="input-group">
+    <h2 data-text="<%- title %>" class="edit-title"><%- title %></h2>
+    <form method="post" action="/admin/update">
+        <div class="user-box">
+            <input type="hidden" name="id" value="<%= user.id %>">
+            <div class="user-box">
+                <label for="full_name">Edit name:</label><br>
+                <input type="text" name="full_name" value="<%= user.full_name %>"><br>
+            </div>
+            <div class="user-box">
+                <label for="username">Edit Username:</label><br>
+                <input type="text" name="username" value="<%= user.username %>"><br>
+            </div>
+            <div class="user-box">
+                <label for="city">Edit city:</label><br>
+                <input type="text" name="city" value="<%= user.city %>"><br>
+            </div>
+            <div class="user-box">
+                <label for="phone">Edit phone:</label><br>
+                <input type="number" name="phone" value="<%= user.phone %>"><br>
+            </div>
+            <div class="user-box">
+                <label for="whatsapp">Edit whatsapp:</label><br>
+                <input type="number" name="whatsapp" value="<%= user.whatsapp %>"><br>
+            </div>
+            <input type="submit" class="edit" value="Edit">
+
+    </form>
+</div>
+</body>
